@@ -22,16 +22,7 @@ torch.load = patched_torch_load
 
 model = ChatterboxTTS.from_pretrained(device=device)
 text = """
-Hello wastelanders, Today i will discuss something that sadly is all to common in the modern world but overlooked, Addiction to the internet.
 
-It has become such a common thing that we don't even acknowledge it and even when we are socializing half of the time we are glued to some screen looking 
-at some stupid tiktok clip or some childish drama between content creators. This in the modern world is just normal. More and more we glue ourselves to the screen
-just like how we did with tv's in the 20th century but i would argue its worse because of how accessible the internet is especially with mobile phones
-
-You can get your fix on the go.
-
-It's funny how we have all these dystopian movies and novels that talk about this very phenomenon. People becoming addicted and glued to screens while the world is
-taken over by evil corporations and our freedom is being destroyed in front of our eyes  
 """
 
 
@@ -46,4 +37,4 @@ wav = model.generate(
     cfg_weight=0.4,
 )
 
-ta.save(f"porn-addiction-{datetime.now().isoformat()}.wav", wav, model.sr)
+ta.save(f"ttt-{datetime.now().isoformat()}.wav", wav, model.sr)
